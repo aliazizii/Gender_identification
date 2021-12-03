@@ -1,0 +1,129 @@
+/* modify default styles  */ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* we use flex display type to correctly align everything in center.
+set the font and background image  and cover options to fit the whole screen
+*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*  Edit default style  */
+input {
+  outline: none;
+  border: none;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+
+/*  container for whole page content.
+it's a flexbox with norwrap attribute which will forces box content to stay in a single line
+align-items is used to make sure each card is aligned center.
+also we use 100% of the whole screen (body).
+
+*/ 
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* Create content*/
+.content {
+  max-width: 70%;
+
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media query for mobile phones and smaller tablets.
+Container will fill the entire page with a single column layout. */
+@media screen and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.left {
+  width: 50%;
+  height: 80%;
+  margin: 1.7rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right {
+  width: 50%;
+  height: 80%;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.section1 {
+  margin: 0.3rem;
+  padding: 0.5rem;
+}
+
+.section1 p {
+  margin: 10px 0;
+}
+
+.section2 {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border: 1px dashed black;
+  border-radius: 3px;
+}
+
+.section2 p,
+.section2 h2 {
+  margin: 10px 0;
+}
+
+/* Edit button style */
+.btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  width: 75px;
+  height: 30px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  background-color: rgb(6, 194, 84);
+}
